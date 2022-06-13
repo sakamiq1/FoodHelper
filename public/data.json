@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Cơm gà",
+    "image_url": "https://shipdoandemff.com/wp-content/uploads/2018/05/Cơm-Gà-Rán-Giòn-Cay.jpg",
+    "price": 64,
+    "nutrition": 261,
+    "rating": 607,
+    "dislike": 211,
+    "like": 667,
+    "order": 948
+  },
+  {
+    "name": "Mỳ ý sốt bò băm",
+    "image_url": "https://smileshop.vn/uploads/tiny_uploads/2221.jpg",
+    "price": 84,
+    "nutrition": 160,
+    "rating": 626,
+    "dislike": 169,
+    "like": 813,
+    "order": 1293
+  },
+  {
+    "name": "Mực chiên",
+    "image_url": "https://bepxua.vn/wp-content/uploads/2021/01/muc-chien-gion.jpg",
+    "price": 92,
+    "nutrition": 142,
+    "rating": 54,
+    "dislike": 258,
+    "like": 70,
+    "order": 358
+  },
+  {
+    "name": "Hamburger",
+    "image_url": "https://thumbs.dreamstime.com/z/kfc-fast-food-restaurant-lopburi-thailand-october-hamburger-fried-chicken-set-kentucky-large-chain-big-c-branch-198743255.jpg",
+    "price": 72,
+    "nutrition": 252,
+    "rating": 603,
+    "dislike": 414,
+    "like": 845,
+    "order": 1392
+  },
+  {
+    "name": "Gà rán",
+    "image_url": "https://kenh14cdn.com/203336854389633024/2022/1/5/fried-chicken-1500688041848-0-60-1000-1659-crop-1500688066346-16413969730341725503796.jpeg",
+    "price": 99,
+    "nutrition": 196,
+    "rating": 78,
+    "dislike": 352,
+    "like": 102,
+    "order": 693
+  },
+  {
+    "name": "Salad rau củ",
+    "image_url": "https://lh3.googleusercontent.com/hGt53Mhd9e8DdmPI3F-PqstacdfRdbBGRgU0fTM0MIsPJTSgpEvd3qOJNAKSnC7N78l6Up8EaifmtN84f6Cl_MnX86ppZA=w600",
+    "price": 93,
+    "nutrition": 177,
+    "rating": 133,
+    "dislike": 638,
+    "like": 173,
+    "order": 823
+  },
+  {
+    "name": "Salad gà",
+    "image_url": "https://lilylaicorner.com/wp-content/uploads/2020/07/Salad-ức-gà-tăng-cơ-giảm-mỡ-1-1.jpg",
+    "price": 52,
+    "nutrition": 115,
+    "rating": 1170,
+    "dislike": 219,
+    "like": 1170,
+    "order": 1699
+  },
+  {
+    "name": "Salad tôm",
+    "image_url": "https://cdn.alongwalker.co/vn/wp-content/uploads/2022/05/28064548/image-salad-tom-bien-165366994736835.jpg",
+    "price": 96,
+    "nutrition": 160,
+    "rating": 980,
+    "dislike": 411,
+    "like": 1078,
+    "order": 1773
+  }
+]

@@ -1,0 +1,27 @@
+.footer-container {
+  padding: 3em 10em;
+  display: grid;
+  grid-auto-flow: column;
+  grid-column: 1fr;
+  .footer-logo-container {
+    display: grid;
+    place-items: center;
+  }
+  .contact-container {
+    h3 {
+      font-size: 22px;
+      line-height: 120%;
+      color: 272042;
+      font-weight: 500;
+    }
+    p {
+      font-size: 16px;
+      line-height: 100%;
+      font-weight: 400;
+      color: #8b8ba5;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
