@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./index.scss";
-import { Button, Checkbox, Form, Slider } from "antd";
+import { Button, Form, Slider } from "antd";
 import { useNavigate } from "react-router-dom";
 
 const UserForm = () => {
@@ -11,16 +11,8 @@ const UserForm = () => {
   const tooltipsNutri = (value) => `${value} calo`;
   const handleSubmit = (values) => {
     console.log(values);
-    navigate("/foods", { state: { ...values } });
+    navigate("/table", { state: { ...values } });
   };
-
-  useEffect(() => {
-    form.setFieldsValue({
-      budget: 100,
-      nutricheck: false,
-      nutrition: 200,
-    });
-  }, []);
 
   return (
     <div className="container">
@@ -40,16 +32,11 @@ const UserForm = () => {
               key="price-slider"
             />
           </Form.Item>
-          <Form.Item
-            label="nutricheck"
-            name="nutricheck"
-            valuePropName="checked"
-          >
-            <Checkbox name="nutricheck" />
-          </Form.Item>
           <Form.Item label="nutrition" name="nutrition">
             <Slider
               tipFormatter={tooltipsNutri}
+              range
+              defaultValue={[100,200]}
               min={100}
               max={1000}
               key="nutrition-slider"

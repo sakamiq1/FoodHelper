@@ -1,26 +1,19 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useLocation, Link } from "react-router-dom";
-import { fetchFoods, getAllFoods } from "../../features/foodSlice";
-import axios from "axios";
-import { Card, List } from "antd";
-import "./index.scss";
-import chefimg from "../../assets/chef-removebg-preview.png";
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { useLocation, Link } from 'react-router-dom'
+import { fetchFoods, getAllFoods } from '../../features/foodSlice'
+import { Card, List } from 'antd'
+import './index.scss'
+import chefimg from '../../assets/chef-removebg-preview.png'
 
 const Foods = () => {
-  const dispatch = useDispatch();
-  const [foods, setFoods] = useState([]);
-
-  //   useEffect(() => {
-  //     dispatch(fetchFoods({ budget, nutricheck, nutrition }));
-  //   }, [dispatch]);
+  const dispatch = useDispatch()
+  const location = useLocation()
+  const foods = useSelector(getAllFoods)
 
   useEffect(() => {
-    axios
-      .get("data.json")
-      .catch((err) => console.log(err))
-      .then((res) => setFoods(res.data));
-  }, []);
+    dispatch(fetchFoods(location.state))
+  }, [dispatch])
 
   return (
     <div className="foods-container">
@@ -34,10 +27,10 @@ const Foods = () => {
       </div>
       {foods && (
         <List
-          pagination={{ pageSize: 8, style: { marginRight: "3em" } }}
+          pagination={{ pageSize: 8, style: { marginRight: '3em' } }}
           className="menu-container"
           grid={{ gutter: [8, 32], column: 4 }}
-          dataSource={foods}
+          dataSource={foods.DecisionTable}
           renderItem={(item) => (
             <Card
               cover={<img src={item.image_url} alt="food-image" />}
@@ -49,7 +42,7 @@ const Foods = () => {
         />
       )}
     </div>
-  );
-};
+  )
+}
 
-export default Foods;
+export default Foods
