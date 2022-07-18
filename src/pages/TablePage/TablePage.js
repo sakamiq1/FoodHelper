@@ -39,57 +39,45 @@ const TablePage = () => {
 
   return (
     <div className="table-container">
-      {foods.DecisionTable && (
-        <>
-          <h1>Decision Table</h1>
-          <Table
-            pagination={{ pageSize: 5 }}
-            columns={columns}
-            loading={!foods.DecisionTable && <Spin />}
-            dataSource={foods.DecisionTable}
-          />
-        </>
-      )}
-      {foods.NormalizeTable && (
-        <>
-          <h1>Normalize Table</h1>
-          <Table
-            pagination={{ pageSize: 5 }}
-            columns={columns}
-            loading={!foods.NormalizeTable && <Spin />}
-            dataSource={foods.NormalizeTable}
-          />
-        </>
-      )}
-      {foods.ResultTable && (
-        <>
-          <h1>Result Table</h1>
-          <Table
-            pagination={{ pageSize: 5 }}
-            columns={columns2}
-            dataSource={foods.ResultTable}
-            loading={!foods.ResultTable && <Spin />}
-            summary={() => (
-              <Table.Summary fixed>
-                <Table.Summary.Row>
-                  <Table.Summary.Cell>A*</Table.Summary.Cell>
-                  {foods.Amax &&
-                    foods.Amax.map((item) => (
-                      <Table.Summary.Cell>{item}</Table.Summary.Cell>
-                    ))}
-                </Table.Summary.Row>
-                <Table.Summary.Row>
-                  <Table.Summary.Cell>A-</Table.Summary.Cell>
-                  {foods.Amin &&
-                    foods.Amin.map((item) => (
-                      <Table.Summary.Cell>{item}</Table.Summary.Cell>
-                    ))}
-                </Table.Summary.Row>
-              </Table.Summary>
-            )}
-          />
-        </>
-      )}
+      <h1>Decision Table</h1>
+      <Table
+        pagination={{ pageSize: 5 }}
+        columns={columns}
+        loading={!foods.DecisionTable && <Spin />}
+        dataSource={foods.DecisionTable ? foods.DecisionTable : []}
+      />
+      <h1>Normalize Table</h1>
+      <Table
+        pagination={{ pageSize: 5 }}
+        columns={columns}
+        loading={!foods.NormalizeTable && <Spin />}
+        dataSource={foods.NormalizeTable ? foods.NormalizeTable : []}
+      />
+      <h1>Result Table</h1>
+      <Table
+        pagination={{ pageSize: 5 }}
+        columns={columns2}
+        dataSource={foods.ResultTable ? foods.ResultTable : []}
+        loading={!foods.ResultTable && <Spin />}
+        summary={() => (
+          <Table.Summary fixed>
+            <Table.Summary.Row>
+              <Table.Summary.Cell>A*</Table.Summary.Cell>
+              {foods.Amax &&
+                foods.Amax.map((item) => (
+                  <Table.Summary.Cell>{item}</Table.Summary.Cell>
+                ))}
+            </Table.Summary.Row>
+            <Table.Summary.Row>
+              <Table.Summary.Cell>A-</Table.Summary.Cell>
+              {foods.Amin &&
+                foods.Amin.map((item) => (
+                  <Table.Summary.Cell>{item}</Table.Summary.Cell>
+                ))}
+            </Table.Summary.Row>
+          </Table.Summary>
+        )}
+      />
     </div>
   )
 }
